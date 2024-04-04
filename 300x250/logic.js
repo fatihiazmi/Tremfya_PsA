@@ -49,6 +49,10 @@ function removepara(e){
       if(key === 'width'){
          _target.style.width = style_obj.width + "px";
       }
+
+      if(key === 'height'){
+        _target.style.height = style_obj.height + "px";
+     }
     }
   }
 // custom function for copy insert END
