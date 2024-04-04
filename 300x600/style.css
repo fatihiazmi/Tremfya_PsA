@@ -1,0 +1,283 @@
+@font-face {
+    font-family: 'gilroybold';
+    src: url('https://s0.2mdn.net/creatives/assets/4965243/gilroy-bold-webfont.woff2') format('woff2'),
+         url('https://s0.2mdn.net/creatives/assets/4965243/gilroy-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gilroymedium';
+    src: url('https://s0.2mdn.net/creatives/assets/4965243/gilroy-medium-webfont.woff2') format('woff2'),
+         url('https://s0.2mdn.net/creatives/assets/4965243/gilroy-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+  
+#wrapper{width:300px;height:600px;overflow:hidden;background-color: #7dc242;top: 0px;left: 0px;position: absolute;z-index: -2; display: block; opacity: 0;}
+
+#wrapper{
+    background:#fff;
+    border:1px solid #000;
+    cursor: pointer;
+}
+
+/* 2. SET UP CLICKTHROUGH PROPERTIES AS SUCH */
+#click_through {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: 600px;
+    overflow: hidden;
+    z-index: 9;
+    cursor: pointer;
+}
+
+*{
+    box-sizing:border-box;
+}
+img{
+    max-width:100%;
+}
+
+body{
+    font-family:'gilroybold';
+}
+
+#logo, #logo2{
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index:3;
+   }
+ #logo2{
+    opacity:0;
+	 z-index: 8;
+ }  
+
+#heroImage{
+ position:absolute;
+ top:0px;
+ left:0px;
+	display: block;
+	opacity: 1;
+}
+
+#frameCopyWrap {
+    position: absolute;
+    left: 0px;
+    top: 93px;
+    height: 272px;
+    align-items: center;
+    width: 100%;
+
+    /* border: 1px solid red; */
+}
+
+
+#frame2, #frame3, #frame4, #frame4, #frame5{
+    position:absolute;
+    top:50%;
+    left:0px;
+    transform:translateY(-50%);
+    width:100%;
+}
+#frame1{height: auto; overflow: hidden; z-index: 2; position: absolute; bottom: 0;display: flex; align-items: center;}
+#frame5{
+    z-index:5;
+    top:48%;
+}
+
+#frame2, #frame3, #frame4, #frame5{
+ opacity:0;
+}
+#frame1_copy,#frame2_copy, #frame3_copy, #frame4_copy, #frame5_copy {
+    padding:0px 10px;
+    font-size:28px;
+    color: #fff;
+    z-index: 1;
+    width:240px;
+    font-family:'gilroybold';
+    line-height:105%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+#frame1_copy .spanColor{
+ color:#ffe600;
+}
+.frame1_copy_shadowed {
+    text-shadow: 0 0 5px black;
+}
+#frame2{
+    height: 100%;
+    transform: none;
+    overflow: hidden;
+    top: auto;
+    bottom:107px;
+    opacity: 1;
+}
+#frame2_copy{
+ color:#004f5e;
+ height: 123px;
+ width: 100%;
+ position: absolute;
+ bottom: 0px;
+ width: 100%;
+}
+#frame2, #frame3, #frame4{
+    z-index:3;
+}
+#frame3{
+    top:37%;
+}
+#frame3_copy{
+    width:100%;
+    color:#004f5e; 
+}
+#frame4_copy{
+    width:100%;
+    color:#004f5e; 
+}
+#frame3_copy .spanColor{
+ color:#00ccc0;
+}
+#frame4{
+    top:37%;
+}
+#frame4_copy .spanColor{
+    color:#00ccc0;
+   }
+#frame3_copy2, #frame4_copy2, #frame2_copy2{
+    font-size:12px;
+    color:#004f5e; 
+    line-height:110%;
+    margin-top:10px;
+    padding:0px 8px 0 9px;
+    font-family:'gilroymedium';
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    /* line-height:110%; */
+}
+#frame4_copy2{
+    margin-top:12px;
+}
+
+#frame2_copy2{
+    position: absolute;
+    top:62%;
+    font-size: 12px;
+    font-family: 'gilroymedium';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#frame5_copy{
+    width:100%;
+    text-align:center;
+}
+#frame5_copy .spanColor{
+    color:#004f5e;
+    line-height:132%;
+    display:block;
+}
+
+#graphicsWrap{
+    position: absolute;
+    top:0px;
+    left:0px;
+    height:100%;
+    width:100%;
+ }
+
+ 
+ #graphicImg1, #graphicImg2{
+  position:absolute;
+  bottom:0px;
+  opacity:0;
+ }
+ 
+ #graphicImg1{
+    bottom:-116px;
+    z-index:8;
+	 transform: rotate(290deg);
+ }
+ #graphicImg2{
+    z-index:4;
+	bottom: -316px;
+ }
+
+ #curveBox {
+    position: absolute;
+    bottom: -370px;
+    left: -42%;
+    background: #fff;
+    width: 540px;
+    height: 540px;
+    border-radius: 50%;
+}
+#logo{z-index: 7;}
+#first-fold{position: absolute; top: 0; width: 100%; height: 67%; overflow: hidden; z-index: 6; background: #fff;}
+#second-fold{position: absolute; bottom: 200px; width: 600px; height: 0%; overflow: hidden; z-index: 7; background: #fff; transform: translateX(-25%); border-radius: 50% 50% 0 0;
+}
+
+
+
+#second-fold .fold
+{
+    position: absolute; bottom:0;height: 428px; width: 300px; transform: translateX(50%);
+}
+
+#first-fold #frame1, #first-fold #heroImage{z-index: 6;}
+#first-fold #frame1{height: 100%;}
+#first-fold .fold{position: relative; top: 0; height: 400px;}
+#curveBox{z-index: 7;}
+#curve{position: absolute; bottom: 207px; height: 0px; width: 300px; z-index: 7; background: #fff;}
+#curve img{
+    display: block;
+    position: absolute;
+    width: 300px;
+    height: 29px;
+    top: -28px;
+}
+sup{    
+    font-size:60%;
+    line-height: 60%;
+}
+
+#cta{
+    position: absolute;
+    top: 350px;
+    left: 50%;
+    transform:translateX(-50%);
+    font-size: 18px;
+    font-family:'gilroybold';
+    color: #004f5e;
+    z-index: 5;
+    width: 125px;
+    border-radius:10px;
+    background-color: #ffe600;
+    text-align: center;
+    height:22px;
+    line-height:22px;
+    cursor: pointer;
+    opacity:0;
+}
+
+
+
+#frame2_copy
+{
+    position: absolute;
+    width: 100%;
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+
+#psoinpsa{
+    display: none;
+}
+
+/*.prescp{position: relative; top: 0px; clear: both; width: 100%; float: right; font-size: 60%; text-align: right;}*/

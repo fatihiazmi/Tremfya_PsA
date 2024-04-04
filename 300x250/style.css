@@ -1,0 +1,287 @@
+@font-face {
+    font-family: 'gilroybold';
+    src: url('https://s0.2mdn.net/creatives/assets/4965243/gilroy-bold-webfont.woff2') format('woff2'),
+         url('https://s0.2mdn.net/creatives/assets/4965243/gilroy-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gilroymedium';
+    src: url('https://s0.2mdn.net/creatives/assets/4965243/gilroy-medium-webfont.woff2') format('woff2'),
+         url('https://s0.2mdn.net/creatives/assets/4965243/gilroy-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+  
+#wrapper{width:300px;height:250px;overflow:hidden;background-color: #7dc242;top: 0px;left: 0px;position: absolute;z-index: -2; display: block; opacity: 0;}
+
+#wrapper{
+    background:#fff;
+    border:1px solid #000;
+    cursor: pointer;
+}
+
+/* 2. SET UP CLICKTHROUGH PROPERTIES AS SUCH */
+#click_through {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: 250px;
+    overflow: hidden;
+    z-index: 11;
+    cursor: pointer;
+}
+
+*{
+    box-sizing:border-box;
+}
+img{
+    max-width:100%;
+}
+
+body{
+    font-family:'gilroybold';
+}
+
+#logo, #logo2{
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index:3;
+   }
+ #logo2{
+    opacity:0;
+	 z-index: 8;
+ }  
+
+#heroImage{
+ position:absolute;
+ top:0px;
+ left:0px;
+	opacity: 1;
+	display: block;
+ 
+}
+
+#frameCopyWrap {
+    position: absolute;
+    left: 0px;
+    top: 20px;
+    height: 162px;
+    align-items: center;
+    width: 100%;
+	z-index: 9;
+    /* border: 1px solid red; */
+}
+
+
+#frame2, #frame3, #frame4, #frame4, #frame5{
+    position:absolute;
+    top:50%;
+    left:0px;
+    transform:translateY(-50%);
+    width:100%;
+}
+#frame1{height: auto; overflow: hidden; z-index: 2; position: absolute; bottom: 0;display: flex; align-items: center;}
+#frame5{
+    z-index:5;
+    top:40%;
+}
+
+#frame2, #frame3, #frame4, #frame5{
+ opacity:0;
+}
+#frame1_copy,#frame2_copy, #frame3_copy, #frame4_copy, #frame5_copy {
+    padding:0px 10px;
+    font-size:18px;
+    color: #fff;
+    z-index: 1;
+    width:300px;
+    font-family:'gilroybold';
+    line-height:100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+#frame1_copy{
+   margin-top: 4px;
+   margin-left: 5px;
+}
+#frame1_copy .spanColor{
+ color:#ffe600;
+}
+.frame1_copy_shadowed {
+    text-shadow: 0 0 5px black;
+}
+#frame2{
+    height: 0px;
+    transform: none;
+    overflow: hidden;
+    top: auto;
+    bottom:-20px;
+	opacity: 1;
+}
+#frame2_copy{
+ color:#004f5e;
+ height: 123px;
+ width: 100%;
+ position: absolute;
+ bottom: 0px;
+ width: 100%;
+}
+#frame2, #frame3, #frame4{
+    z-index:5;
+}
+#frame3{
+    bottom: 15px;
+    height: auto;
+    position: absolute;
+    top: auto;
+	transform: none;
+}
+#frame3_copy{
+    width:100%;
+    color:#004f5e;
+	margin-bottom: 5px;
+}
+#frame4_copy{
+    width:100%;
+    color:#004f5e;
+	margin-bottom: 15px;
+}
+#frame3_copy .spanColor{
+ color:#00ccc0;
+}
+#frame4{
+    bottom: 15px;
+    height: auto;
+    position: absolute;
+    top: auto;
+	transform: none;
+    margin-left: 5px;
+}
+#frame4_copy .spanColor{
+    color:#00ccc0;
+   }
+#frame3_copy2, #frame4_copy2, #frame2_copy2{
+    font-size:11px;
+    color:#004f5e; 
+    line-height:100%;
+    margin-top:0;
+    padding:0px 10px;
+    font-family:'gilroymedium';
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    /* line-height:110%; */
+}
+#frame2_copy2{
+    position: absolute;
+    bottom: 31%;
+}
+
+#frame5_copy{
+    width:100%;
+    text-align:center;
+    line-height: 80%;
+}
+#frame5_copy .spanColor{
+    color:#004f5e;
+    line-height:130%;
+    display:block;
+}
+
+#graphicsWrap{
+    position: absolute;
+    top:0px;
+    left:0px;
+    height:100%;
+    width:100%;
+ }
+
+ 
+ #graphicImg1, #graphicImg2{
+  position:absolute;
+  bottom:0px;
+  opacity:0;
+ }
+ 
+ #graphicImg1{
+   right: -275px;
+    width: 258px;
+   z-index:8;
+ }
+ #graphicImg2{
+    z-index:4;
+    width: 360px;
+    left: -22px;
+    transform: rotate(134deg) scale(1, 1);
+    bottom: -245px;
+ }
+
+ #logo{z-index: 7;}
+#first-fold{position: absolute; top: 0; width: 100%; height: 69%; overflow: hidden; z-index: 6; background: #fff;}
+#second-fold{position: absolute; bottom: 55px; width: 500px; height: 0%; overflow: hidden; z-index: 7; background: #fff; transform: translateX(-21%); border-radius: 50% 50% 0 0;
+}
+
+
+
+#second-fold .fold
+{
+    position: absolute; bottom:0;height: 190px; width: 300px; transform: translateX(37%);
+}
+
+#first-fold #frame1, #first-fold #heroImage{z-index: 6;}
+#first-fold #frame1{height: 100%;}
+#first-fold .fold{position: relative; top: 0; height: 190px;}
+#curveBox{z-index: 7;}
+#curve{position: absolute; bottom: 207px; height: 0px; width: 300px; z-index: 7; background: #fff;}
+#curve img{
+    display: block;
+    position: absolute;
+    width: 300px;
+    height: 29px;
+    top: -28px;
+}
+
+sup{    
+    font-size:60%;
+    line-height:60%;
+}
+
+#cta{
+    position: absolute;
+    bottom: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    font-family: 'gilroybold';
+    color: #004f5e;
+    z-index: 5;
+    width: 102px;
+    border-radius: 10px;
+    background-color: #ffe600;
+    text-align: center;
+    height: 18px;
+    line-height: 18px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.safariVersion #frame3_copy2, .safariVersion #frame4_copy2, .safariVersion #frame2_copy2 {
+    font-size:11px;
+}
+#frame2_copy
+{
+    position: absolute;
+    width: 100%;
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+#psoinpsa{
+    display: none;
+}
+#frame3, #frame4{height: 115px;display: flex;flex-direction: column;justify-content: center;}
+#frame3_copy, #frame4_copy{margin-bottom: 5px;}

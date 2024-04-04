@@ -1,0 +1,290 @@
+#isi-container {
+    position: absolute;
+    bottom: -2px;
+    height: 62px;
+    width: 300px;
+    background-color: #ffffff;
+    padding: 10px 1px 0px 7px;
+    box-sizing: border-box;
+    overflow: hidden;
+    overflow-y: scroll; /* Allow scrolling and add a vertical scrollbar */
+    z-index: 99;
+    }
+
+    #isi_links {
+        position: absolute;
+        width: 300px;
+        height: auto;
+        bottom: 63px;
+        background-size: contain;
+        /* background-image: url(isi_links.png); */
+        opacity: 1;
+        z-index: 101;
+        border-top: 1px solid #fff;
+        height: 16px;
+    }
+
+    #presc, #medGuide {
+        position: absolute;
+        width: 160px;
+        height: 18px;
+        z-index: 1100;
+        cursor: pointer;
+        background: #004f5e;
+        width: 50%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        text-align: center;
+        line-height: 18px;
+        color:#fff;
+        font-weight: 300;
+    }
+    #presc a, #medGuide a {
+       text-decoration:none;
+       color:#fff;
+    }    
+#presc {
+        border-right: 2px solid #fff;
+        text-align: left;
+        padding-left: 10px;
+}
+   #medGuide {
+    left: 150px;
+}
+
+/* add css start from here  */
+
+
+.main-copy {
+    color: #333333 !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 13px;
+    /* padding: 8px 8px 8px 7px; */
+}
+
+.main-copy h3{
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top:0px;
+}
+
+.main-copy sup {
+    font-size: .6em;
+    line-height: 0;
+    vertical-align: .6em;
+    position:static;
+}
+
+.main-copy ul{
+list-style:outside;
+padding-left:11px;
+padding-bottom: 3px;
+}
+.main-copy ul.sublist{
+  list-style-type:circle;
+  padding-left: 10px;
+}
+
+.bold-copy,
+b,
+strong {
+    font-weight: 700;
+}
+
+.teal-copy {
+    color: #004f5e;
+}
+
+
+.black-copy{
+  color: #666d70;
+}
+
+.no-bullet {
+    list-style: none;
+}
+
+.medium-margin {
+    margin-bottom: 8px;
+    margin-top: 0px;
+}
+
+.medium-margin-up {
+    margin-top: 6px;
+}
+
+.large-margin {
+    margin-bottom: 20px;
+    margin-right: -8px;
+}
+
+.exits {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.exits a{
+    /*color:#666d70;*/
+    text-decoration:none;
+	color: #004f5e;
+	font-weight: bold;
+}
+#ISI_FDA_exit.exits a{
+    /*color:#666d70;*/
+	color: #004f5e;
+	font-weight: bold;
+}
+
+
+.nowrap,
+.cp-code {
+    white-space: nowrap;
+}
+
+#devider-logos {
+    width: 300px;
+    display: block;
+    margin-left: -11px;
+    margin-bottom: 6px;
+	max-width: 110%;
+}
+
+.legal {
+    width: 260px;
+    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+}
+.list{
+    list-style: none;
+}
+.list li{
+    position: relative;
+    list-style: none;
+}
+.list li::after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50px;
+    background:#004f5e;
+    left: -9px;
+    top: 5px;
+}
+.list li.no-bullet::after{display: none;}
+
+.sublist li:after{
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    border-radius: 50px;
+   background: transparent;
+    left: -8px;
+    top: 5px;
+    border: #666d70 solid 1px;
+}
+.list.black-bullet li:after{
+    background:#666d70;
+}
+
+.list-copy {
+    display: block;
+    margin-left: -3px;
+}
+
+.sublist {
+    margin-left: 6px;
+}
+
+.sublist-copy {
+    display: block;
+    margin-left: 0px;
+}
+
+/* Scroll Bar Behaviour */
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 5px;
+background: #d7d7d7;
+  }
+::-webkit-scrollbar-track{
+  border: none;
+  border-radius: 0;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #6e6e6e;
+  box-shadow: 0 0 1px rgba(255,255,255,.5);
+  height: 24px;
+}
+
+#isi-container-hm {
+    position: absolute;
+    bottom: -2px;
+    height: 65px;
+    width: 300px;
+    background-color: #ffffff;
+    padding: 10px 1px 0px 7px;
+    box-sizing: border-box;
+    overflow: hidden;
+    overflow-y: scroll; /* Allow scrolling and add a vertical scrollbar */
+    z-index: 99;
+}
+
+#isi-container-hm .main-copy {
+    letter-spacing: 0px;
+    line-height: 14px;
+    font-size: 10.8px;
+}
+
+#isi-container-hm .main-copy h3 {
+    font-size: 11.8px;
+}
+
+#isi-container-hm .medium-margin {
+    margin-bottom: 4px;
+    margin-top: 0px;
+}
+
+#isi_links_hm {
+    position: absolute;
+    width: 300px;
+    height: auto;
+    bottom: 66px;
+    background-size: contain;
+    /* background-image: url(isi_links.png); */
+    opacity: 1;
+    z-index: 101;
+    border-top: 1px solid #fff;
+    height: 16px;
+}
+
+#presc_hm, #medGuide_hm {
+    position: absolute; 
+    height: 18px;
+    z-index: 1100;
+    cursor: pointer;
+    background: #004f5e; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9.5px;
+    text-align: center;
+    line-height: 18px;
+    color:#fff;
+    font-weight: 300;
+}
+#presc_hm a, #medGuide_hm a {
+   text-decoration:none;
+   color:#fff;
+}    
+#presc_hm {
+    border-right: 1px solid #fff;
+    text-align: left;
+    padding-left: 7px;
+    width: 176px;
+}
+#medGuide_hm {
+    right: 0;
+    width: 124px; 
+}
