@@ -248,6 +248,7 @@ body{
  }
  
 #graphicImg1 {
+    transform: rotate(257deg);
     right: -110px;
     bottom: -108px;
     z-index: 7;
@@ -255,8 +256,9 @@ body{
 }
  #graphicImg2{
     z-index:4;
-	 right: -188px;
-    bottom: -188px;
+	transform: rotate(-114deg) scale(0.5);
+    right: 201px;
+    bottom: -525px;
  }
 
  #curveBox {
@@ -329,7 +331,7 @@ sup{
 	padding-left: 115px;
 }
 
-.left-border{position: absolute; left: 483px; top: 0; width: 1px; border-right: 2px solid #004f5e; background: transparent; z-index: 100; height: 90px;}
+.left-border{position: absolute; left: 477px; top: 0; width: 1px; border-right: 2px solid #004f5e; background: transparent; z-index: 100; height: 90px;}
 
 #psoinpsa{
     display: none;
