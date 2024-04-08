@@ -107,6 +107,7 @@ body{
 #frame1_copy .spanColor{
  color:#ffe600;
 }
+
 .frame1_copy_shadowed {
     text-shadow: 0 0 5px black;
 }

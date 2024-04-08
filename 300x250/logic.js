@@ -165,7 +165,7 @@ function BuildTemplate(feedData,elements) {
     insertImage(feedData[0].graphicImg2.Url,"src", elements.graphicImg2);
     elements['cta'].innerHTML = dynamicContent.DRAFT_Tremfya_PsA_Wave2_Addressable_2023_masterfeed[0].cta;
     elements['cp_code'].innerHTML = dynamicContent.DRAFT_Tremfya_PsA_Wave2_Addressable_2023_masterfeed[0].cp_code;
-    elements['cp_code_hm'].innerHTML = dynamicContent.DRAFT_Tremfya_PsA_Wave2_Addressable_2023_masterfeed[0].cp_code;
+    // elements['cp_code_hm'].innerHTML = dynamicContent.DRAFT_Tremfya_PsA_Wave2_Addressable_2023_masterfeed[0].cp_code;
 
     removepara(feedData[0].creativeVersion);
     console.log("customLabel: "+customLabel);
@@ -526,8 +526,6 @@ function initAnimation(feedData,elements){
     
         timeline.play();
     }
-
-
 
 
 // ============ END ANIMATION FUNCTIONS ============ //

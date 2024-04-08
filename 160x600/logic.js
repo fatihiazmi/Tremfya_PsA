@@ -533,7 +533,5 @@ function initAnimation(feedData,elements){
     }
 
 
-
-
 // ============ END ANIMATION FUNCTIONS ============ //
 

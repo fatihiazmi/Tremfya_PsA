@@ -18,6 +18,7 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.8.0_min.js"></script>
+    <script src="../gsdevtools.min.js"></script>
 
     <!--Load Google/Platform Invocation Code Into Header Tags-->
     <script id="PlatformCode"> //Set ID to PlatformCode
@@ -49,7 +50,7 @@
     devDynamicContent.DRAFT_Tremfya_PsA_Wave2_Addressable_2023_masterfeed[0].logo.Url = "https://s0.2mdn.net/creatives/assets/5160796/logo_728x90.png";
     devDynamicContent.DRAFT_Tremfya_PsA_Wave2_Addressable_2023_masterfeed[0].logo2 = {};
     devDynamicContent.DRAFT_Tremfya_PsA_Wave2_Addressable_2023_masterfeed[0].logo2.Type = "file";
-    devDynamicContent.DRAFT_Tremfya_PsA_Wave2_Addressable_2023_masterfeed[0].logo2.Url = "https://s0.2mdn.net/creatives/assets/5160796/logo_728x90.png";
+    devDynamicContent.DRAFT_Tremfya_PsA_Wave2_Addressable_2023_masterfeed[0].logo2.Url = "https://s0.2mdn.net/creatives/assets/5160796/logo2_728x90.png";
     devDynamicContent.DRAFT_Tremfya_PsA_Wave2_Addressable_2023_masterfeed[0].heroImage = {};
     devDynamicContent.DRAFT_Tremfya_PsA_Wave2_Addressable_2023_masterfeed[0].heroImage.Type = "file";
     devDynamicContent.DRAFT_Tremfya_PsA_Wave2_Addressable_2023_masterfeed[0].heroImage.Url = "https://s0.2mdn.net/creatives/assets/5160796/hero_728x90.jpg";
@@ -100,7 +101,7 @@
 			<div class="fold">
                 <div id="heroImage"></div>
                 <div id="frame1">
-                        <div id="frame1_copy"></div>
+                        <div id="frame1_copy" class="frame1_copy_shadowed"></div>
                 </div>
 			</div>
 			  
@@ -231,7 +232,7 @@
                     </ul>
                     </span>
                     </li>
-                    <li class="medium-margin"><span class="list-copy"><b class="teal-copy">Infecciones.</b> TREMFYA<sup>®</sup> puede disminuir la capacidad<br>del sistema inmune para combatir infecciones y puede<br>aumentar el riesgo de contraer infecciones. El proveedor<br>de atención médica deberá realizarle exámenes para<br>detectar infecciones y tuberculosis (TB) antes de<br>comenzar el tratamiento con TREMFYA<sup>®</sup> y es posible<br>que deba tratar la TB antes de comenzar el tratamiento<br>con TREMFYA<sup>®</sup> si tiene antecedentes de TB o TB activa.<br>El proveedor de atención médica deberá darle<br>seguimiento de cerca para detectar la posible presencia<br>de signos y síntomas de TB durante y después del<br>tratamiento con<br>TREMFYA<sup>®</sup>.</span></li>
+                    <li class="medium-margin"><span class="list-copy"><b class="teal-copy">Infecciones.</b> TREMFYA<sup>®</sup> puede disminuir la capacidad<br>del sistema inmune para combatir infecciones y puede<br>aumentar el riesgo de contraer infecciones. El proveedor<br>de atención médica deberá realizarle exámenes para<br>detectar infecciones y tuberculosis (TB) antes de<br>comenzar el tratamiento con TREMFYA<sup>®</sup> y es posible<br>que deba tratar la TB antes de comenzar el tratamiento<br>con TREMFYA<sup>®</sup> si tiene antecedentes de TB o TB activa.<br>El proveedor de atención médica deberá darle<br>seguimiento de cerca para detectar la posible presencia<br>de signos y síntomas de TB durante y después del<br>tratamiento con TREMFYA<sup>®</sup>.</span></li>
                     <li class="no-bullet"><span class="list-copy">Comuníquele de inmediato al proveedor de atención<br>médica si presenta una infección o tiene síntomas de<br>esta, entre los que se incluyen:
                         <ul class="sublist">
                     <li><span class="sublist-copy">fiebre, sudoración o escalofríos;</span></li>
@@ -289,7 +290,7 @@
         const element = document.querySelector('#isi-container');
         const element2 = document.querySelector('#isi-container-hm');
         let isHovered = false;
-        let speed = .190; // Change as needed
+        let speed = .465; // Change as needed
     
         function autoScroll(elem, scrollPos, spd) {
         let scrollAmount = scrollPos;

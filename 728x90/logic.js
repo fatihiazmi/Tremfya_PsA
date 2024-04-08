@@ -165,7 +165,7 @@ function BuildTemplate(feedData,elements) {
     insertImage(feedData[0].graphicImg2.Url,"src", elements.graphicImg2);
     elements['cta'].innerHTML = dynamicContent.DRAFT_Tremfya_PsA_Wave2_Addressable_2023_masterfeed[0].cta;
     elements['cp_code'].innerHTML = dynamicContent.DRAFT_Tremfya_PsA_Wave2_Addressable_2023_masterfeed[0].cp_code;
-    elements['cp_code_hm'].innerHTML = dynamicContent.DRAFT_Tremfya_PsA_Wave2_Addressable_2023_masterfeed[0].cp_code;
+    // elements['cp_code_hm'].innerHTML = dynamicContent.DRAFT_Tremfya_PsA_Wave2_Addressable_2023_masterfeed[0].cp_code;
 
     removepara(feedData[0].creativeVersion);
 
@@ -356,7 +356,7 @@ function initAnimation(feedData,elements){
         let size = document.getElementsByTagName("title")[0].innerHTML; //Get size from the title tag
     
         console.log('Start Animation');
-        timeline = new TimelineMax({ delay: 0, onComplete: function() { console.log("Animation Complete");console.log("Duration: "+ this.totalDuration() + "s");} });
+        timeline = gsap.timeline({ delay: 0, onComplete: function() { console.log("Animation Complete");console.log("Duration: "+ this.totalDuration() + "s");} });
     
         // ================= Build animation timeline here ================= 
         /** Set Initial State - Start with all elements hidden
@@ -390,7 +390,7 @@ function initAnimation(feedData,elements){
     
        //Initial Style for wrapper and main container elements should be set to display none initially.
         //TweenMax.set(['#wrapper'],{ display: 'block' }); //Reveal the banner wrapper
-        TweenMax.set([//Additional animation initial setttings
+        timeline.set([//Additional animation initial setttings
             "#frame1", // elements['frame1_copy'] 
             "#graphicsWrap",
             "#logo",
@@ -401,70 +401,78 @@ function initAnimation(feedData,elements){
         ],{ alpha: 0 });
     
         if (feedData[0].Person == "HM") {
-            TweenMax.set(['#isi-container-hm',],{ alpha: 1 });
-            TweenMax.set(['#isi-container',],{ alpha: 0 });
-            TweenMax.set(['#isi_links_hm',],{ alpha: 1 });
-            TweenMax.set(['#isi_links',],{ alpha: 0 });
+            timeline.set(['#isi-container-hm',],{ alpha: 1 });
+            timeline.set(['#isi-container',],{ alpha: 0 });
+            timeline.set(['#isi_links_hm',],{ alpha: 1 });
+            timeline.set(['#isi_links',],{ alpha: 0 });
         }
 
         if (feedData[0].Person == "HM") {
             timeline.add([
            
-                TweenMax.to('#wrapper', .005, { alpha: 1, ease: Cubic.easeInOut }),
-                TweenMax.to('#logo', .0, { alpha: 1, ease: Cubic.easeInOut }),
-                TweenMax.to('#logo', .5, { delay: 3, alpha: 0, ease: Cubic.easeInOut }),
-                TweenMax.to('#logo', .5, { delay: 17.5, alpha: 1, ease: Cubic.easeInOut }), // 13.5
-                TweenMax.to('#logo2', .5, { delay: 3, alpha: 1, ease: Cubic.easeInOut }),
-                TweenMax.to('#logo2', 0.5, { delay: 17.5, alpha: 0, ease: Cubic.easeInOut }), // 13.5
-                //Hero  Image
-                //TweenMax.to('#heroImage', .5, { alpha: 1, ease: Cubic.easeInOut }),
-                TweenMax.to('#heroImage', 0, { alpha: 0, delay: 3.8, ease: Cubic.easeInOut }),
+                // TweenMax.to('#wrapper', .005, { alpha: 1, ease: Cubic.easeInOut }),
+                // TweenMax.to('#logo', .0, { alpha: 1, ease: Cubic.easeInOut }),
+                // TweenMax.to('#logo', .5, { delay: 3, alpha: 0, ease: Cubic.easeInOut }),
+                // TweenMax.to('#logo', .5, { delay: 17.5, alpha: 1, ease: Cubic.easeInOut }), // 13.5
+                // TweenMax.to('#logo2', .5, { delay: 3, alpha: 1, ease: Cubic.easeInOut }),
+                // TweenMax.to('#logo2', 0.5, { delay: 17.5, alpha: 0, ease: Cubic.easeInOut }), // 13.5
+                // //Hero  Image
+                // //TweenMax.to('#heroImage', .5, { alpha: 1, ease: Cubic.easeInOut }),
+                // TweenMax.to('#heroImage', 0, { alpha: 0, delay: 3.8, ease: Cubic.easeInOut }),
                 // TweenMax.to('#heroImage', 0.8, { alpha: 1, delay: 17.5, zIndex:2, ease: Cubic.easeInOut }), // 13.5
-                 //Frame 1
-                TweenMax.to('#frame1', .5, { alpha: 1, ease: Cubic.easeInOut }),
-                TweenMax.to('#frame1', 1, { delay: 3, alpha: 0, ease: Cubic.easeInOut }),
-                TweenMax.to('#graphicsWrap', .5, { alpha: 1, ease: Cubic.easeInOut }),
-                //TweenMax.to('#curveBox', 2, { alpha: 1, delay: 2, left:-80, ease: Cubic.easeInOut }),
+                //  //Frame 1
+                // TweenMax.to('#frame1', .5, { alpha: 1, ease: Cubic.easeInOut }),
+                // TweenMax.to('#frame1', 1, { delay: 3, alpha: 0, ease: Cubic.easeInOut }),
+                // TweenMax.to('#graphicsWrap', .5, { alpha: 1, ease: Cubic.easeInOut }),
+                // //TweenMax.to('#curveBox', 2, { alpha: 1, delay: 2, left:-80, ease: Cubic.easeInOut }),
                 
-                // //First Fold
-                TweenMax.to('#second-fold', 2, { delay: 2, width:650, ease: Cubic.easeInOut }),
-                TweenMax.to('#second-fold', 2, { delay: 3.8, ease: Cubic.easeInOut }),
+                // // //First Fold
+                // TweenMax.to('#second-fold', 2, { delay: 2, width:650, ease: Cubic.easeInOut }),
+                // TweenMax.to('#second-fold', 2, { delay: 3.8, ease: Cubic.easeInOut }),
             
-                TweenMax.to('#first-fold', 1, { delay: 3, zIndex:2, ease: Cubic.easeInOut }),
-                TweenMax.to('#second-fold', 1, { delay: 5.5, alpha: 0, ease: Cubic.easeInOut }),
+                // TweenMax.to('#first-fold', 1, { delay: 3, zIndex:2, ease: Cubic.easeInOut }),
+                // TweenMax.to('#second-fold', 1, { delay: 5.5, alpha: 0, ease: Cubic.easeInOut }),
             
-                // //Frame 2
-                TweenMax.to('#frame2', 1, { delay: 2.5, alpha: 1, ease: Cubic.easeInOut }),
-                TweenMax.to('#frame2', 1, { delay: 5, alpha: 0, ease: Cubic.easeInOut }),
+                // // //Frame 2
+                // TweenMax.to('#frame2', 1, { delay: 2.5, alpha: 1, ease: Cubic.easeInOut }),
+                // TweenMax.to('#frame2', 1, { delay: 5, alpha: 0, ease: Cubic.easeInOut }),
         
-                // //System  graphics
-                TweenMax.to('#graphicImg1', 1, { delay: 3.2, right:29, alpha:1, scale:0.8, ease: Cubic.easeInOut }),
-                //TweenMax.to('#graphicImg1', 1.5, { delay: 5, rotate:0,  ease: Cubic.easeInOut }),
-                //TweenMax.to('#graphicImg1', 1.5, { delay: 5.2, rotate:-4, ease: Cubic.easeInOut }),
-                TweenMax.to('#graphicImg1', 12, { delay: 2.5, rotate:-133, ease: Cubic.easeInOut }),
+                // // //System  graphics
+                // TweenMax.to('#graphicImg1', 1, { delay: 3.2, right:29, alpha:1, scale:0.8, ease: Cubic.easeInOut }),
+                // //TweenMax.to('#graphicImg1', 1.5, { delay: 5, rotate:0,  ease: Cubic.easeInOut }),
+                // //TweenMax.to('#graphicImg1', 1.5, { delay: 5.2, rotate:-4, ease: Cubic.easeInOut }),
+                // TweenMax.to('#graphicImg1', 12, { delay: 2.5, rotate:-133, ease: Cubic.easeInOut }),
     
-                TweenMax.to('#graphicImg1', 1.5, { delay: 17.3, right:1000, scale:1.18, ease: Cubic.easeInOut }), // 13.3
+                // TweenMax.to('#graphicImg1', 1.5, { delay: 17.3, right:1000, scale:1.18, ease: Cubic.easeInOut }), // 13.3
                 // //TweenMax.to('#graphicImg1', 1.5, { delay: 11, right:480, zIndex:4, ease: Cubic.easeInOut }),
                 // //TweenMax.to('#graphicImg1', 1.5, { delay: 11, right:509, scale:1.18, ease: Cubic.easeInOut }),
-                TweenMax.to('#graphicImg2', 0.8, { delay: 18, alpha: 1 ,right:201, ease: Cubic.easeInOut }), // 14
+                // TweenMax.to('#graphicImg2', 0.8, { delay: 18, alpha: 1 ,right:201, ease: Cubic.easeInOut }), // 14
               
-                // // Frame 3
-                TweenMax.to('#frame3', 1, { alpha: 1, delay: 5.5, ease: Cubic.easeInOut }),
-                TweenMax.to('#frame3', 1, { alpha: 0, delay: 10.7, ease: Cubic.easeInOut }), // 8.7
+                // // // Frame 3
+                // TweenMax.to('#frame3', 1, { alpha: 1, delay: 5.5, ease: Cubic.easeInOut }),
+                // TweenMax.to('#frame3', 1, { alpha: 0, delay: 10.7, ease: Cubic.easeInOut }), // 8.7
         
-                // //Frame 4
-                TweenMax.to('#frame4', 1, { alpha: 1, delay: 10.7, ease: Cubic.easeInOut }), // 8.7
-                TweenMax.to('#frame4', 1, { alpha: 0, delay: 16.9, ease: Cubic.easeInOut }), // 12.9
+                // // //Frame 4
+                // TweenMax.to('#frame4', 1, { alpha: 1, delay: 10.7, ease: Cubic.easeInOut }), // 8.7
+                // TweenMax.to('#frame4', 1, { alpha: 0, delay: 16.9, ease: Cubic.easeInOut }), // 12.9
         
-                // //Frame 5
-                TweenMax.to('#frame5', 0.5, { delay: 1, x: "+=50", ease: Cubic.easeInOut }),
-                TweenMax.to('#frame5', 0.5, { alpha: 1, delay: 18.5, x: "-=50", ease: Cubic.easeInOut }), // 14.5
+                // // //Frame 5
+                // TweenMax.to('#frame5', 0.5, { delay: 1, x: "+=50", ease: Cubic.easeInOut }),
+                // TweenMax.to('#frame5', 0.5, { alpha: 1, delay: 18.5, x: "-=50", ease: Cubic.easeInOut }), // 14.5
         
-                // // Cta
-                TweenMax.to('#cta', 0.5, { delay: 1, x: "+=50", ease: Cubic.easeInOut }),
-                TweenMax.to('#cta', 0.5, { alpha: 1, delay: 18.5, x: "-=56", y: "-=3", ease: Cubic.easeInOut }), // 14.5
+                // // // Cta
+                // TweenMax.to('#cta', 0.5, { delay: 1, x: "+=50", ease: Cubic.easeInOut }),
+                // TweenMax.to('#cta', 0.5, { alpha: 1, delay: 18.5, x: "-=56", y: "-=3", ease: Cubic.easeInOut }), // 14.5
                
-               
+                timeline.to('#wrapper', .005, { alpha:1, ease: Cubic.easeInOut }),
+                timeline.to('#logo', .0, { alpha:1, ease: Cubic.easeInOut }),
+                timeline.to('#frame1', .5, { alpha:1, ease: Cubic.easeInOut },"<"),
+                timeline.to('#graphicsWrap', .5, { alpha:1, ease: Cubic.easeInOut },"<"),
+                timeline.to('#second-fold', 2, { width:650, ease: Cubic.easeInOut }, ">4.5"),
+                timeline.to('#logo2', .0, { alpha:1, ease: Cubic.easeInOut }, "<+1.25"),
+                timeline.to('#graphicImg1', 1, { right:29, alpha:1, scale:0.8, ease: Cubic.easeInOut },"<"),
+                
+                    
             ]);
         }
 
@@ -534,7 +542,6 @@ function initAnimation(feedData,elements){
         timeline.play();
     }
 
-
-
+GSDevTools.create(initAnimation)
 // ============ END ANIMATION FUNCTIONS ============ //
 
